@@ -22,6 +22,6 @@ public class CarDaoImp implements CarDao {
 
     @Override
     public List<Car> showCars(int num) {
-        return cars.subList(0, num);
+        return num > 5 ? cars : cars.subList(0,  num);
     }
 }
